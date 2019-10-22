@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx?wsdl" docRef="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" xmlns:q1="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos" binding="q1:ServiceMovimientosSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" xmlns:q2="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos" binding="q2:ServiceMovimientosSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,3622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos">
+      <s:element name="wsListarMovimientos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="marcaExporta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="marcaMov" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSalida" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarMovimientosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosv2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="marcaExporta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="marcaMov" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSalida" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosv2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarMovimientosv2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosPersonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosPersonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarMovimientosPersonasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarMovimientosTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Legajo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FotoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Obsevaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsInsertarNuevoUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuarioF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Legajo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FotoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Obsevaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuarioFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsInsertarNuevoUsuarioFResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuariov2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Legajo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FotoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Obsevaciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Habilitado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuariov2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsInsertarNuevoUsuariov2Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuarioP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Legajo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroAsignacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FotoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Obsevaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaIngreso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaNacimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Habilitado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoUsuarioPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsInsertarNuevoUsuarioPResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsBajaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Legajo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSectorBaja" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Obsevaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsBajaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsBajaUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsEliminarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Legajo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsEliminarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsEliminarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarMovimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sensorId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHoraMov" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoMov" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Obsevaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarMovimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsInsertarMovimientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarNovedades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarNovedadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarNovedadesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarNovedadesT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarNovedadesTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarNovedadesTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarNovedadesP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarNovedadesPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarNovedadesPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDispositvo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarMovimientosMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarMovimientosMobileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarRutaMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDispositvo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarRutaMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarRutaMobileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarTurnos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarTurnosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarTurnosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarTurnosFlexibles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarTurnosFlexiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarTurnosFlexiblesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarConteo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarConteoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarConteoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsConsultaLegajoFecha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsConsultaLegajoFechaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsConsultaLegajoFechaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarSectores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarSectoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarSectoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoSector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTimeZone" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Geo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idIdioma" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPais" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsInsertarNuevoSectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsInsertarNuevoSectorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarTimeZone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarTimeZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarTimeZoneResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarIdiomas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarIdiomasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarIdiomasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarPaises">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarPaisesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarPaisesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarConceptosLiquidacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarConceptosLiquidacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarConceptosLiquidacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsReportePresentismo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsReportePresentismoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsReportePresentismoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsLiquidacionConceptos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsLiquidacionConceptosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsLiquidacionConceptosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarHuellasUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarHuellasUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarHuellasUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsReporteFacturacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsReporteFacturacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsReporteFacturacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsReporteLlegadasTarde">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idSector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsReporteLlegadasTardeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsReporteLlegadasTardeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarAsignacionSkills">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarAsignacionSkillsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarAsignacionSkillsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarAsignacionSkillsKN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarAsignacionSkillsKNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarAsignacionSkillsKNResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarRestriccionesUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Legajo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsListarRestriccionesUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsListarRestriccionesUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="wsListarMovimientosSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientos" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosv2SoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosv2" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosv2SoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosv2Response" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosPersonasSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosPersonas" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosPersonasSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosTSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosT" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosTSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosTResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioFSoapIn">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuarioF" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioFSoapOut">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuarioFResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuariov2SoapIn">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuariov2" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuariov2SoapOut">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuariov2Response" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioPSoapIn">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuarioP" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioPSoapOut">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoUsuarioPResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsBajaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:wsBajaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="wsBajaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:wsBajaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsEliminarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:wsEliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="wsEliminarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:wsEliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarMovimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:wsInsertarMovimiento" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarMovimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:wsInsertarMovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarNovedades" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarNovedadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesTSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarNovedadesT" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesTSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarNovedadesTResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesPSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarNovedadesP" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesPSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarNovedadesPResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosMobile" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarMovimientosMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRutaMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarRutaMobile" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRutaMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarRutaMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarTurnos" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarTurnosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosFlexiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarTurnosFlexibles" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosFlexiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarTurnosFlexiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConteoSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarConteo" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConteoSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarConteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="wsListarUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsConsultaLegajoFechaSoapIn">
+    <wsdl:part name="parameters" element="tns:wsConsultaLegajoFecha" />
+  </wsdl:message>
+  <wsdl:message name="wsConsultaLegajoFechaSoapOut">
+    <wsdl:part name="parameters" element="tns:wsConsultaLegajoFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarSectoresSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarSectores" />
+  </wsdl:message>
+  <wsdl:message name="wsListarSectoresSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarSectoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoSectorSoapIn">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoSector" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoSectorSoapOut">
+    <wsdl:part name="parameters" element="tns:wsInsertarNuevoSectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTimeZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarTimeZone" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTimeZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarTimeZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarIdiomasSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarIdiomas" />
+  </wsdl:message>
+  <wsdl:message name="wsListarIdiomasSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarIdiomasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarPaisesSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarPaises" />
+  </wsdl:message>
+  <wsdl:message name="wsListarPaisesSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarPaisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConceptosLiquidacionSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarConceptosLiquidacion" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConceptosLiquidacionSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarConceptosLiquidacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsReportePresentismoSoapIn">
+    <wsdl:part name="parameters" element="tns:wsReportePresentismo" />
+  </wsdl:message>
+  <wsdl:message name="wsReportePresentismoSoapOut">
+    <wsdl:part name="parameters" element="tns:wsReportePresentismoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsLiquidacionConceptosSoapIn">
+    <wsdl:part name="parameters" element="tns:wsLiquidacionConceptos" />
+  </wsdl:message>
+  <wsdl:message name="wsLiquidacionConceptosSoapOut">
+    <wsdl:part name="parameters" element="tns:wsLiquidacionConceptosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarHuellasUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarHuellasUsuario" />
+  </wsdl:message>
+  <wsdl:message name="wsListarHuellasUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarHuellasUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteFacturacionSoapIn">
+    <wsdl:part name="parameters" element="tns:wsReporteFacturacion" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteFacturacionSoapOut">
+    <wsdl:part name="parameters" element="tns:wsReporteFacturacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteLlegadasTardeSoapIn">
+    <wsdl:part name="parameters" element="tns:wsReporteLlegadasTarde" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteLlegadasTardeSoapOut">
+    <wsdl:part name="parameters" element="tns:wsReporteLlegadasTardeResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarAsignacionSkills" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarAsignacionSkillsResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsKNSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarAsignacionSkillsKN" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsKNSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarAsignacionSkillsKNResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRestriccionesUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:wsListarRestriccionesUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRestriccionesUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:wsListarRestriccionesUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="marcaExporta" type="s:string" />
+    <wsdl:part name="marcaMov" type="s:string" />
+    <wsdl:part name="TipoSalida" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosv2HttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="marcaExporta" type="s:string" />
+    <wsdl:part name="marcaMov" type="s:string" />
+    <wsdl:part name="TipoSalida" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosv2HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosPersonasHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dni" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosPersonasHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosTHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioFHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioFHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuariov2HttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+    <wsdl:part name="Habilitado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuariov2HttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioPHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="nroAsignacion" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+    <wsdl:part name="fechaIngreso" type="s:string" />
+    <wsdl:part name="FechaNacimiento" type="s:string" />
+    <wsdl:part name="Habilitado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioPHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsBajaUsuarioHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="idSectorBaja" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsBajaUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsEliminarUsuarioHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsEliminarUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarMovimientoHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="sensorId" type="s:string" />
+    <wsdl:part name="fechaHoraMov" type="s:string" />
+    <wsdl:part name="idTipoMov" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarMovimientoHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesTHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesPHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesPHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosMobileHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idDispositvo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosMobileHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRutaMobileHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idDispositvo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRutaMobileHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosFlexiblesHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosFlexiblesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConteoHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConteoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarUsuariosHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarUsuariosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsConsultaLegajoFechaHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsConsultaLegajoFechaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarSectoresHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarSectoresHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoSectorHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="idTimeZone" type="s:string" />
+    <wsdl:part name="Geo" type="s:string" />
+    <wsdl:part name="idIdioma" type="s:string" />
+    <wsdl:part name="idPais" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoSectorHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTimeZoneHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTimeZoneHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarIdiomasHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarIdiomasHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarPaisesHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarPaisesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConceptosLiquidacionHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConceptosLiquidacionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsReportePresentismoHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="cuit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsReportePresentismoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsLiquidacionConceptosHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsLiquidacionConceptosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarHuellasUsuarioHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarHuellasUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteFacturacionHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="periodo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteFacturacionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteLlegadasTardeHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteLlegadasTardeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsKNHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsKNHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRestriccionesUsuariosHttpGetIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRestriccionesUsuariosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="marcaExporta" type="s:string" />
+    <wsdl:part name="marcaMov" type="s:string" />
+    <wsdl:part name="TipoSalida" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosv2HttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="marcaExporta" type="s:string" />
+    <wsdl:part name="marcaMov" type="s:string" />
+    <wsdl:part name="TipoSalida" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosv2HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosPersonasHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dni" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosPersonasHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosTHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioFHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioFHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuariov2HttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+    <wsdl:part name="Habilitado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuariov2HttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioPHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="Apellido" type="s:string" />
+    <wsdl:part name="Documento" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="nroAsignacion" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Telefono" type="s:string" />
+    <wsdl:part name="Direccion" type="s:string" />
+    <wsdl:part name="FotoUsuario" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+    <wsdl:part name="fechaIngreso" type="s:string" />
+    <wsdl:part name="FechaNacimiento" type="s:string" />
+    <wsdl:part name="Habilitado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoUsuarioPHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsBajaUsuarioHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="idSectorBaja" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsBajaUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsEliminarUsuarioHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsEliminarUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarMovimientoHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="sensorId" type="s:string" />
+    <wsdl:part name="fechaHoraMov" type="s:string" />
+    <wsdl:part name="idTipoMov" type="s:string" />
+    <wsdl:part name="Obsevaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarMovimientoHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesTHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesPHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarNovedadesPHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosMobileHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idDispositvo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarMovimientosMobileHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRutaMobileHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idDispositvo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRutaMobileHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosFlexiblesHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTurnosFlexiblesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConteoHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConteoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarUsuariosHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarUsuariosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsConsultaLegajoFechaHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsConsultaLegajoFechaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarSectoresHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarSectoresHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoSectorHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+    <wsdl:part name="Nombre" type="s:string" />
+    <wsdl:part name="idTimeZone" type="s:string" />
+    <wsdl:part name="Geo" type="s:string" />
+    <wsdl:part name="idIdioma" type="s:string" />
+    <wsdl:part name="idPais" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsInsertarNuevoSectorHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTimeZoneHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarTimeZoneHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarIdiomasHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarIdiomasHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarPaisesHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarPaisesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConceptosLiquidacionHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarConceptosLiquidacionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsReportePresentismoHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="cuit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsReportePresentismoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsLiquidacionConceptosHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsLiquidacionConceptosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarHuellasUsuarioHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarHuellasUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteFacturacionHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="periodo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteFacturacionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteLlegadasTardeHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+    <wsdl:part name="idSector" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsReporteLlegadasTardeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsKNHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="fechaDesde" type="s:string" />
+    <wsdl:part name="fechaHasta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarAsignacionSkillsKNHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRestriccionesUsuariosHttpPostIn">
+    <wsdl:part name="idEmpresa" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="Legajo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsListarRestriccionesUsuariosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceMovimientosSoap">
+    <wsdl:operation name="wsListarMovimientos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosSoapIn" />
+      <wsdl:output message="tns:wsListarMovimientosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario con marca E/S</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosv2SoapIn" />
+      <wsdl:output message="tns:wsListarMovimientosv2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/persona con marca E/S</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosPersonasSoapIn" />
+      <wsdl:output message="tns:wsListarMovimientosPersonasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario para Interfase con Tango</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosTSoapIn" />
+      <wsdl:output message="tns:wsListarMovimientosTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioSoapIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioFSoapIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario con parametro de Habilitado 0/1</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuariov2SoapIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuariov2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario con parametro de Habilitado 0/1</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioPSoapIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Baja de un Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsBajaUsuarioSoapIn" />
+      <wsdl:output message="tns:wsBajaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminación de un Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsEliminarUsuarioSoapIn" />
+      <wsdl:output message="tns:wsEliminarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de Movimientos Remotos</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarMovimientoSoapIn" />
+      <wsdl:output message="tns:wsInsertarMovimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesSoapIn" />
+      <wsdl:output message="tns:wsListarNovedadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario para Interfase con Tango</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesTSoapIn" />
+      <wsdl:output message="tns:wsListarNovedadesTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario para Interfase con Presea</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesPSoapIn" />
+      <wsdl:output message="tns:wsListarNovedadesPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos Mobile de una empresa/sector/usuario con Geo y foto</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosMobileSoapIn" />
+      <wsdl:output message="tns:wsListarMovimientosMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer seguimiento de Ruta Mobile de una empresa/sector/usuario con Geo</wsdl:documentation>
+      <wsdl:input message="tns:wsListarRutaMobileSoapIn" />
+      <wsdl:output message="tns:wsListarRutaMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Turnos de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTurnosSoapIn" />
+      <wsdl:output message="tns:wsListarTurnosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Turnos Flexibles de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTurnosFlexiblesSoapIn" />
+      <wsdl:output message="tns:wsListarTurnosFlexiblesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trae Conteos de una empresa/sector</wsdl:documentation>
+      <wsdl:input message="tns:wsListarConteoSoapIn" />
+      <wsdl:output message="tns:wsListarConteoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Usuarios de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarUsuariosSoapIn" />
+      <wsdl:output message="tns:wsListarUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta si dado un legajo y una fecha tiene marcaciones en la fecha y los horarios</wsdl:documentation>
+      <wsdl:input message="tns:wsConsultaLegajoFechaSoapIn" />
+      <wsdl:output message="tns:wsConsultaLegajoFechaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Sectores de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarSectoresSoapIn" />
+      <wsdl:output message="tns:wsListarSectoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Sector / Sucursal</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoSectorSoapIn" />
+      <wsdl:output message="tns:wsInsertarNuevoSectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Timezone de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTimeZoneSoapIn" />
+      <wsdl:output message="tns:wsListarTimeZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Idiomas de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarIdiomasSoapIn" />
+      <wsdl:output message="tns:wsListarIdiomasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Paises de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarPaisesSoapIn" />
+      <wsdl:output message="tns:wsListarPaisesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Conceptos de liquidacion de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarConceptosLiquidacionSoapIn" />
+      <wsdl:output message="tns:wsListarConceptosLiquidacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de Presentismo</wsdl:documentation>
+      <wsdl:input message="tns:wsReportePresentismoSoapIn" />
+      <wsdl:output message="tns:wsReportePresentismoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Liquidación por Conceptos</wsdl:documentation>
+      <wsdl:input message="tns:wsLiquidacionConceptosSoapIn" />
+      <wsdl:output message="tns:wsLiquidacionConceptosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Huellas de un Usuario de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarHuellasUsuarioSoapIn" />
+      <wsdl:output message="tns:wsListarHuellasUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de Facturacion de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsReporteFacturacionSoapIn" />
+      <wsdl:output message="tns:wsReporteFacturacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de LLegadas tarde </wsdl:documentation>
+      <wsdl:input message="tns:wsReporteLlegadasTardeSoapIn" />
+      <wsdl:output message="tns:wsReporteLlegadasTardeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Asignacion de horas por Skills</wsdl:documentation>
+      <wsdl:input message="tns:wsListarAsignacionSkillsSoapIn" />
+      <wsdl:output message="tns:wsListarAsignacionSkillsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Asignacion de horas por Skills KN - formato especial</wsdl:documentation>
+      <wsdl:input message="tns:wsListarAsignacionSkillsKNSoapIn" />
+      <wsdl:output message="tns:wsListarAsignacionSkillsKNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Restricciones de usuarios</wsdl:documentation>
+      <wsdl:input message="tns:wsListarRestriccionesUsuariosSoapIn" />
+      <wsdl:output message="tns:wsListarRestriccionesUsuariosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceMovimientosHttpGet">
+    <wsdl:operation name="wsListarMovimientos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosHttpGetIn" />
+      <wsdl:output message="tns:wsListarMovimientosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario con marca E/S</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosv2HttpGetIn" />
+      <wsdl:output message="tns:wsListarMovimientosv2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/persona con marca E/S</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosPersonasHttpGetIn" />
+      <wsdl:output message="tns:wsListarMovimientosPersonasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario para Interfase con Tango</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosTHttpGetIn" />
+      <wsdl:output message="tns:wsListarMovimientosTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioHttpGetIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioFHttpGetIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario con parametro de Habilitado 0/1</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuariov2HttpGetIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuariov2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario con parametro de Habilitado 0/1</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioPHttpGetIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Baja de un Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsBajaUsuarioHttpGetIn" />
+      <wsdl:output message="tns:wsBajaUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminación de un Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsEliminarUsuarioHttpGetIn" />
+      <wsdl:output message="tns:wsEliminarUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de Movimientos Remotos</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarMovimientoHttpGetIn" />
+      <wsdl:output message="tns:wsInsertarMovimientoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesHttpGetIn" />
+      <wsdl:output message="tns:wsListarNovedadesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario para Interfase con Tango</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesTHttpGetIn" />
+      <wsdl:output message="tns:wsListarNovedadesTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario para Interfase con Presea</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesPHttpGetIn" />
+      <wsdl:output message="tns:wsListarNovedadesPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos Mobile de una empresa/sector/usuario con Geo y foto</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosMobileHttpGetIn" />
+      <wsdl:output message="tns:wsListarMovimientosMobileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer seguimiento de Ruta Mobile de una empresa/sector/usuario con Geo</wsdl:documentation>
+      <wsdl:input message="tns:wsListarRutaMobileHttpGetIn" />
+      <wsdl:output message="tns:wsListarRutaMobileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Turnos de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTurnosHttpGetIn" />
+      <wsdl:output message="tns:wsListarTurnosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Turnos Flexibles de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTurnosFlexiblesHttpGetIn" />
+      <wsdl:output message="tns:wsListarTurnosFlexiblesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trae Conteos de una empresa/sector</wsdl:documentation>
+      <wsdl:input message="tns:wsListarConteoHttpGetIn" />
+      <wsdl:output message="tns:wsListarConteoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Usuarios de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarUsuariosHttpGetIn" />
+      <wsdl:output message="tns:wsListarUsuariosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta si dado un legajo y una fecha tiene marcaciones en la fecha y los horarios</wsdl:documentation>
+      <wsdl:input message="tns:wsConsultaLegajoFechaHttpGetIn" />
+      <wsdl:output message="tns:wsConsultaLegajoFechaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Sectores de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarSectoresHttpGetIn" />
+      <wsdl:output message="tns:wsListarSectoresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Sector / Sucursal</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoSectorHttpGetIn" />
+      <wsdl:output message="tns:wsInsertarNuevoSectorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Timezone de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTimeZoneHttpGetIn" />
+      <wsdl:output message="tns:wsListarTimeZoneHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Idiomas de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarIdiomasHttpGetIn" />
+      <wsdl:output message="tns:wsListarIdiomasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Paises de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarPaisesHttpGetIn" />
+      <wsdl:output message="tns:wsListarPaisesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Conceptos de liquidacion de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarConceptosLiquidacionHttpGetIn" />
+      <wsdl:output message="tns:wsListarConceptosLiquidacionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de Presentismo</wsdl:documentation>
+      <wsdl:input message="tns:wsReportePresentismoHttpGetIn" />
+      <wsdl:output message="tns:wsReportePresentismoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Liquidación por Conceptos</wsdl:documentation>
+      <wsdl:input message="tns:wsLiquidacionConceptosHttpGetIn" />
+      <wsdl:output message="tns:wsLiquidacionConceptosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Huellas de un Usuario de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarHuellasUsuarioHttpGetIn" />
+      <wsdl:output message="tns:wsListarHuellasUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de Facturacion de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsReporteFacturacionHttpGetIn" />
+      <wsdl:output message="tns:wsReporteFacturacionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de LLegadas tarde </wsdl:documentation>
+      <wsdl:input message="tns:wsReporteLlegadasTardeHttpGetIn" />
+      <wsdl:output message="tns:wsReporteLlegadasTardeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Asignacion de horas por Skills</wsdl:documentation>
+      <wsdl:input message="tns:wsListarAsignacionSkillsHttpGetIn" />
+      <wsdl:output message="tns:wsListarAsignacionSkillsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Asignacion de horas por Skills KN - formato especial</wsdl:documentation>
+      <wsdl:input message="tns:wsListarAsignacionSkillsKNHttpGetIn" />
+      <wsdl:output message="tns:wsListarAsignacionSkillsKNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Restricciones de usuarios</wsdl:documentation>
+      <wsdl:input message="tns:wsListarRestriccionesUsuariosHttpGetIn" />
+      <wsdl:output message="tns:wsListarRestriccionesUsuariosHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceMovimientosHttpPost">
+    <wsdl:operation name="wsListarMovimientos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosHttpPostIn" />
+      <wsdl:output message="tns:wsListarMovimientosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario con marca E/S</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosv2HttpPostIn" />
+      <wsdl:output message="tns:wsListarMovimientosv2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/persona con marca E/S</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosPersonasHttpPostIn" />
+      <wsdl:output message="tns:wsListarMovimientosPersonasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos de una empresa/sector/usuario para Interfase con Tango</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosTHttpPostIn" />
+      <wsdl:output message="tns:wsListarMovimientosTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioHttpPostIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioFHttpPostIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario con parametro de Habilitado 0/1</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuariov2HttpPostIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuariov2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Usuario con parametro de Habilitado 0/1</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoUsuarioPHttpPostIn" />
+      <wsdl:output message="tns:wsInsertarNuevoUsuarioPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Baja de un Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsBajaUsuarioHttpPostIn" />
+      <wsdl:output message="tns:wsBajaUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminación de un Usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsEliminarUsuarioHttpPostIn" />
+      <wsdl:output message="tns:wsEliminarUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de Movimientos Remotos</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarMovimientoHttpPostIn" />
+      <wsdl:output message="tns:wsInsertarMovimientoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesHttpPostIn" />
+      <wsdl:output message="tns:wsListarNovedadesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario para Interfase con Tango</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesTHttpPostIn" />
+      <wsdl:output message="tns:wsListarNovedadesTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Partes de Novedades de una empresa/sector/usuario para Interfase con Presea</wsdl:documentation>
+      <wsdl:input message="tns:wsListarNovedadesPHttpPostIn" />
+      <wsdl:output message="tns:wsListarNovedadesPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer movimientos Mobile de una empresa/sector/usuario con Geo y foto</wsdl:documentation>
+      <wsdl:input message="tns:wsListarMovimientosMobileHttpPostIn" />
+      <wsdl:output message="tns:wsListarMovimientosMobileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer seguimiento de Ruta Mobile de una empresa/sector/usuario con Geo</wsdl:documentation>
+      <wsdl:input message="tns:wsListarRutaMobileHttpPostIn" />
+      <wsdl:output message="tns:wsListarRutaMobileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Turnos de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTurnosHttpPostIn" />
+      <wsdl:output message="tns:wsListarTurnosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Turnos Flexibles de una empresa/sector/usuario</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTurnosFlexiblesHttpPostIn" />
+      <wsdl:output message="tns:wsListarTurnosFlexiblesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trae Conteos de una empresa/sector</wsdl:documentation>
+      <wsdl:input message="tns:wsListarConteoHttpPostIn" />
+      <wsdl:output message="tns:wsListarConteoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Usuarios de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarUsuariosHttpPostIn" />
+      <wsdl:output message="tns:wsListarUsuariosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta si dado un legajo y una fecha tiene marcaciones en la fecha y los horarios</wsdl:documentation>
+      <wsdl:input message="tns:wsConsultaLegajoFechaHttpPostIn" />
+      <wsdl:output message="tns:wsConsultaLegajoFechaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Sectores de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarSectoresHttpPostIn" />
+      <wsdl:output message="tns:wsListarSectoresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserción de un nuevo Sector / Sucursal</wsdl:documentation>
+      <wsdl:input message="tns:wsInsertarNuevoSectorHttpPostIn" />
+      <wsdl:output message="tns:wsInsertarNuevoSectorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Timezone de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarTimeZoneHttpPostIn" />
+      <wsdl:output message="tns:wsListarTimeZoneHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Idiomas de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarIdiomasHttpPostIn" />
+      <wsdl:output message="tns:wsListarIdiomasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Paises de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarPaisesHttpPostIn" />
+      <wsdl:output message="tns:wsListarPaisesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Conceptos de liquidacion de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsListarConceptosLiquidacionHttpPostIn" />
+      <wsdl:output message="tns:wsListarConceptosLiquidacionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de Presentismo</wsdl:documentation>
+      <wsdl:input message="tns:wsReportePresentismoHttpPostIn" />
+      <wsdl:output message="tns:wsReportePresentismoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Liquidación por Conceptos</wsdl:documentation>
+      <wsdl:input message="tns:wsLiquidacionConceptosHttpPostIn" />
+      <wsdl:output message="tns:wsLiquidacionConceptosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Huellas de un Usuario de la Empresa</wsdl:documentation>
+      <wsdl:input message="tns:wsListarHuellasUsuarioHttpPostIn" />
+      <wsdl:output message="tns:wsListarHuellasUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de Facturacion de la plataforma</wsdl:documentation>
+      <wsdl:input message="tns:wsReporteFacturacionHttpPostIn" />
+      <wsdl:output message="tns:wsReporteFacturacionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reporte de LLegadas tarde </wsdl:documentation>
+      <wsdl:input message="tns:wsReporteLlegadasTardeHttpPostIn" />
+      <wsdl:output message="tns:wsReporteLlegadasTardeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Asignacion de horas por Skills</wsdl:documentation>
+      <wsdl:input message="tns:wsListarAsignacionSkillsHttpPostIn" />
+      <wsdl:output message="tns:wsListarAsignacionSkillsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Asignacion de horas por Skills KN - formato especial</wsdl:documentation>
+      <wsdl:input message="tns:wsListarAsignacionSkillsKNHttpPostIn" />
+      <wsdl:output message="tns:wsListarAsignacionSkillsKNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listado de Restricciones de usuarios</wsdl:documentation>
+      <wsdl:input message="tns:wsListarRestriccionesUsuariosHttpPostIn" />
+      <wsdl:output message="tns:wsListarRestriccionesUsuariosHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceMovimientosSoap" type="tns:ServiceMovimientosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="wsListarMovimientos">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosv2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuarioF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuariov2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuarioP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsBajaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsEliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarMovimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarNovedades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarNovedadesT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarNovedadesP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarRutaMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarTurnos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarTurnosFlexibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarConteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsConsultaLegajoFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarSectores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoSector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarTimeZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarIdiomas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarPaises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarConceptosLiquidacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsReportePresentismo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsLiquidacionConceptos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarHuellasUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsReporteFacturacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsReporteLlegadasTarde" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarAsignacionSkills" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarAsignacionSkillsKN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <soap:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarRestriccionesUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceMovimientosSoap12" type="tns:ServiceMovimientosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="wsListarMovimientos">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosv2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosPersonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuarioF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuariov2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoUsuarioP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsBajaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsEliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarMovimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarNovedades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarNovedadesT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarNovedadesP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarMovimientosMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarRutaMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarTurnos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarTurnosFlexibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarConteo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsConsultaLegajoFecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarSectores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsInsertarNuevoSector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarTimeZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarIdiomas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarPaises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarConceptosLiquidacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsReportePresentismo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsLiquidacionConceptos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarHuellasUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsReporteFacturacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsReporteLlegadasTarde" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarAsignacionSkills" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarAsignacionSkillsKN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <soap12:operation soapAction="http://www.qpweb.com.ar/QPWsMovimientos/ServiceMovimientos/wsListarRestriccionesUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceMovimientosHttpGet" type="tns:ServiceMovimientosHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="wsListarMovimientos">
+      <http:operation location="/wsListarMovimientos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <http:operation location="/wsListarMovimientosv2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <http:operation location="/wsListarMovimientosPersonas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <http:operation location="/wsListarMovimientosT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <http:operation location="/wsInsertarNuevoUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <http:operation location="/wsInsertarNuevoUsuarioF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <http:operation location="/wsInsertarNuevoUsuariov2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <http:operation location="/wsInsertarNuevoUsuarioP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <http:operation location="/wsBajaUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <http:operation location="/wsEliminarUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <http:operation location="/wsInsertarMovimiento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <http:operation location="/wsListarNovedades" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <http:operation location="/wsListarNovedadesT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <http:operation location="/wsListarNovedadesP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <http:operation location="/wsListarMovimientosMobile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <http:operation location="/wsListarRutaMobile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <http:operation location="/wsListarTurnos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <http:operation location="/wsListarTurnosFlexibles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <http:operation location="/wsListarConteo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <http:operation location="/wsListarUsuarios" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <http:operation location="/wsConsultaLegajoFecha" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <http:operation location="/wsListarSectores" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <http:operation location="/wsInsertarNuevoSector" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <http:operation location="/wsListarTimeZone" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <http:operation location="/wsListarIdiomas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <http:operation location="/wsListarPaises" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <http:operation location="/wsListarConceptosLiquidacion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <http:operation location="/wsReportePresentismo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <http:operation location="/wsLiquidacionConceptos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <http:operation location="/wsListarHuellasUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <http:operation location="/wsReporteFacturacion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <http:operation location="/wsReporteLlegadasTarde" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <http:operation location="/wsListarAsignacionSkills" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <http:operation location="/wsListarAsignacionSkillsKN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <http:operation location="/wsListarRestriccionesUsuarios" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceMovimientosHttpPost" type="tns:ServiceMovimientosHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="wsListarMovimientos">
+      <http:operation location="/wsListarMovimientos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosv2">
+      <http:operation location="/wsListarMovimientosv2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosPersonas">
+      <http:operation location="/wsListarMovimientosPersonas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosT">
+      <http:operation location="/wsListarMovimientosT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuario">
+      <http:operation location="/wsInsertarNuevoUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioF">
+      <http:operation location="/wsInsertarNuevoUsuarioF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuariov2">
+      <http:operation location="/wsInsertarNuevoUsuariov2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoUsuarioP">
+      <http:operation location="/wsInsertarNuevoUsuarioP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsBajaUsuario">
+      <http:operation location="/wsBajaUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsEliminarUsuario">
+      <http:operation location="/wsEliminarUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarMovimiento">
+      <http:operation location="/wsInsertarMovimiento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedades">
+      <http:operation location="/wsListarNovedades" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesT">
+      <http:operation location="/wsListarNovedadesT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarNovedadesP">
+      <http:operation location="/wsListarNovedadesP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarMovimientosMobile">
+      <http:operation location="/wsListarMovimientosMobile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRutaMobile">
+      <http:operation location="/wsListarRutaMobile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnos">
+      <http:operation location="/wsListarTurnos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTurnosFlexibles">
+      <http:operation location="/wsListarTurnosFlexibles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConteo">
+      <http:operation location="/wsListarConteo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarUsuarios">
+      <http:operation location="/wsListarUsuarios" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsConsultaLegajoFecha">
+      <http:operation location="/wsConsultaLegajoFecha" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarSectores">
+      <http:operation location="/wsListarSectores" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsInsertarNuevoSector">
+      <http:operation location="/wsInsertarNuevoSector" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarTimeZone">
+      <http:operation location="/wsListarTimeZone" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarIdiomas">
+      <http:operation location="/wsListarIdiomas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarPaises">
+      <http:operation location="/wsListarPaises" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarConceptosLiquidacion">
+      <http:operation location="/wsListarConceptosLiquidacion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReportePresentismo">
+      <http:operation location="/wsReportePresentismo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsLiquidacionConceptos">
+      <http:operation location="/wsLiquidacionConceptos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarHuellasUsuario">
+      <http:operation location="/wsListarHuellasUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteFacturacion">
+      <http:operation location="/wsReporteFacturacion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsReporteLlegadasTarde">
+      <http:operation location="/wsReporteLlegadasTarde" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkills">
+      <http:operation location="/wsListarAsignacionSkills" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarAsignacionSkillsKN">
+      <http:operation location="/wsListarAsignacionSkillsKN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsListarRestriccionesUsuarios">
+      <http:operation location="/wsListarRestriccionesUsuarios" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceMovimientos">
+    <wsdl:port name="ServiceMovimientosSoap" binding="tns:ServiceMovimientosSoap">
+      <soap:address location="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceMovimientosSoap12" binding="tns:ServiceMovimientosSoap12">
+      <soap12:address location="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceMovimientosHttpGet" binding="tns:ServiceMovimientosHttpGet">
+      <http:address location="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceMovimientosHttpPost" binding="tns:ServiceMovimientosHttpPost">
+      <http:address location="http://mx3.quickpassweb.com/QPWsMovimientos/ServiceMovimientos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
